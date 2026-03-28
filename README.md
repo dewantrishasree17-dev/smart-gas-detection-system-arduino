@@ -1,9 +1,9 @@
 # Smart Gas Detection System using Arduino
 
-## Description
+## ⚙️Description
 The Smart Gas Detection System using Arduino is designed to detect harmful gases or smoke in the environment for home safety and fire prevention. The MQ gas sensor continuously monitors air quality and sends analog data to the Arduino. When the gas concentration exceeds a preset threshold level, the buzzer alerts the user and the green LED turns OFF indicating danger. When the environment is safe, the green LED remains ON and the buzzer stays OFF. This system helps in early detection of gas leakage and prevents accidents.
 
-## Features
+## ⚙️Features
 - Detects harmful gases and smoke using MQ gas sensor
 - Provides early warning for gas leakage and fire hazards
 - Buzzer alert when gas level exceeds safe limit
@@ -58,7 +58,7 @@ The Smart Gas Detection System using Arduino is designed to detect harmful gases
 - Arduino reads the sensor value and compares it with a preset threshold level to determine whether the environment is safe or unsafe.
 - If the gas concentration exceeds the safe limit, the buzzer turns ON and the green LED turns OFF, giving an alert for gas leakage or fire risk.
 
-- 
+  
 ## 🧪 Testing Procedure
 
 - Connect all components according to the circuit diagram and upload the Arduino code to the Arduino UNO using USB cable.
