@@ -51,10 +51,9 @@ The Smart Gas Detection System using Arduino is designed to detect harmful gases
 - Arduino distributes power to the *MQ gas sensor, buzzer, and green LED* through its 5V and GND pins.
 - A stable 5V power supply ensures accurate gas detection and proper working of the system.
 ## System Architecture & Circuit Diagram
-![Tinkercad Wiring Schematic](circuit.jpeg.png)
+  ![Real hardware implementation](circuit.jpeg)
 
-![Real hardware implementation](tinkercad.png)
-  
+![Tinkercad Wiring Schematic](tinkercad.png)
 ## ⚙️ Working Principle
 
 - The MQ gas sensor continuously senses harmful gases or smoke in the air and sends analog signals to the Arduino UNO.
