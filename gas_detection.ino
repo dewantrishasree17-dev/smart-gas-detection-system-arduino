@@ -4,7 +4,7 @@ const int BUZZER_PIN = 8;   // Piezo buzzer digital output
 const int LED_PIN = 13;     // Green LED digital output
 
 // Threshold limit for gas concentration alert
-const int GAS_THRESHOLD = 350; 
+const int GAS_THRESHOLD = 650; 
 
 void setup() {
   pinMode(BUZZER_PIN, OUTPUT);  // Set buzzer pin as output
