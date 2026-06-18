@@ -1,44 +1,33 @@
-#define MQ_PIN A0
-#define BUZZER_PIN 8
-#define GREEN_LED 6
+// Pin Configurations
+const int MQ135_PIN = A0;   // Gas sensor analog signal input
+const int BUZZER_PIN = 8;   // Piezo buzzer digital output
+const int LED_PIN = 13;     // Green LED digital output
 
-int gasValue;
-int threshold = 35;   // adjust according to readings
+// Threshold limit for gas concentration alert
+const int GAS_THRESHOLD = 350; 
 
 void setup() {
-
-  Serial.begin(9600);
-
-  pinMode(BUZZER_PIN, OUTPUT);
-  pinMode(GREEN_LED, OUTPUT);
-
-  digitalWrite(BUZZER_PIN, LOW);
-  digitalWrite(GREEN_LED, HIGH);   // safe condition initially
-
-  Serial.println("Gas Detection System Started");
+  pinMode(BUZZER_PIN, OUTPUT);  // Set buzzer pin as output
+  pinMode(LED_PIN, OUTPUT);     // Set LED pin as output
+  Serial.begin(9600);           // Initialize Serial Monitor at 9600 baud rate
 }
 
 void loop() {
-
-  gasValue = analogRead(MQ_PIN);
-
-  Serial.print("Gas Value: ");
+  // Read the analog value from the gas sensor
+  int gasValue = analogRead(MQ135_PIN);
+  
+  // Print the value to the Serial Monitor for tracking
+  Serial.print("Gas Concentration Level: ");
   Serial.println(gasValue);
-
-  if (gasValue > threshold) {
-
-    digitalWrite(BUZZER_PIN, HIGH);  // buzzer ON (danger)
-    digitalWrite(GREEN_LED, LOW);    // LED OFF (unsafe)
-
-    Serial.println("Gas/Smoke Detected!");
-
-  } 
-  else {
-
-    digitalWrite(BUZZER_PIN, LOW);   // buzzer OFF (safe)
-    digitalWrite(GREEN_LED, HIGH);   // LED ON (safe)
-
+  
+  // Check if the reading crosses our safety threshold limit
+  if (gasValue > GAS_THRESHOLD) {
+    digitalWrite(BUZZER_PIN, HIGH);  // Turn buzzer ON
+    digitalWrite(LED_PIN, HIGH);     // Turn LED ON
+  } else {
+    digitalWrite(BUZZER_PIN, LOW);   // Turn buzzer OFF
+    digitalWrite(LED_PIN, LOW);      // Turn LED OFF
   }
-
-  delay(500);
+  
+  delay(500); // Wait half a second before taking the next reading
 }
