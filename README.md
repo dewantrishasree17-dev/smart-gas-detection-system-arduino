@@ -57,7 +57,10 @@ The Smart Gas Detection System using Arduino is designed to detect harmful gases
 
 
 ## Live Simulation Demo 
-<video src="gas-sensor-record%20(1).mp4" controls width="100%"></video>
+
+
+https://github.com/user-attachments/assets/ab0b02a2-36ba-4941-9136-8f1c9ce5513a
+
 
 ## ⚙️ Working Principle
 
