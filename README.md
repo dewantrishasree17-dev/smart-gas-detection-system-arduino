@@ -41,7 +41,7 @@ The Smart Gas Detection System using Arduino is designed to detect harmful gases
 
 | LED Pin | Arduino Pin |
 |--------|-------------|
-| Anode (+) | D6 (via 220Ω resistor) |
+| Anode (+) | D13 |
 | Cathode (–) | GND |
 
 
